@@ -43,4 +43,10 @@ You can download Ollama from its [official website](https://ollama.com/).
 $ ollama pull mistral
 ```
 
+**Mxbai-embed-large**  was trained with no overlap of the MTEB data, which indicates that the model generalizes well across several domains, tasks and text length, in embedding your dataset. To use Mxbai-embed model with Ollama, run the following command: 
+```bash
+$ ollama pull mxbai-embed-large
+```
+
+
 
