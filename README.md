@@ -8,6 +8,13 @@
 
 In this section, we demonstrate how to build a chatbot using RAG to answer questions based on a given context. We’ll use **Ollama models** and **embeddings** to create a simple Streamlit app capable of answering questions based on context ingested in a vector store database.
 
+### Requirements 
+In order to run this app we need to install first our requirements dependencies using pip, to do that make sure to use the code below:
+```bash
+$ pip install -r requirements.txt
+
+```
+
 ### Steps:
 
 1. **Ingesting Documents**: 
@@ -17,6 +24,8 @@ In this section, we demonstrate how to build a chatbot using RAG to answer quest
    - The `LLM.py` script retrieves answers using the ingested database. Optionally, it can answer queries based on a PDF uploaded by the user.
 
 ---
+
+
 
 ## Ollama
 
@@ -32,3 +41,6 @@ You can download Ollama from its [official website](https://ollama.com/).
 
 ```bash
 $ ollama pull mistral
+```
+
+
