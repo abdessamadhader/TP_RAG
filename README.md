@@ -1,16 +1,34 @@
-Ollama 
-=====================================
-Ollama is a library that provides an easy way to use Retriever Augmented Generation in your projects. It is built on top of the Hugging Face Transformers library. Ollama provides a simple API to use the retriever augmented generation method. It allows you to use any retriever and generator model from the Hugging Face model hub.
-Ollama is downloadable from the Ollama website: https://ollama.com/
+# Retriever-Augmented Generation (RAG)
 
-Mistral from Ollama
--------------------------------------
-Mistral is large language model trained on a mixture of supervised and unsupervised data. And it is pullable from the Ollama 
-To use Mistral from Ollama, you can use the following code:
+**Retriever-Augmented Generation** (RAG) is a technique that enhances the quality and relevance of generated text by incorporating a retriever. The retriever selects the most pertinent context from external documents, which then informs the generation process. This approach is valuable for producing accurate and contextually relevant responses, as it provides the model with focused context from external sources.
 
-.. code-block:: bash
+---
 
+## Building a RAG-Powered Chatbot
 
-    $ ollama pull mistral 
+In this section, we demonstrate how to build a chatbot using RAG to answer questions based on a given context. We’ll use **Ollama models** and **embeddings** to create a simple Streamlit app capable of answering questions based on context ingested in a vector store database.
 
+### Steps:
 
+1. **Ingesting Documents**: 
+   - The `ingest.py` script processes documents from the `documents` folder. This script extracts text from documents, splits it into chunks, generates embeddings, and stores them in a Chroma vector database.
+   
+2. **Generating Answers**:
+   - The `LLM.py` script retrieves answers using the ingested database. Optionally, it can answer queries based on a PDF uploaded by the user.
+
+---
+
+## Ollama
+
+Ollama is a library built on top of the Hugging Face Transformers library, offering an easy way to implement Retriever-Augmented Generation (RAG) in projects. With a simple API, Ollama enables seamless integration of any retriever and generator model from the Hugging Face model hub. 
+
+You can download Ollama from its [official website](https://ollama.com/).
+
+---
+
+### Using Mistral with Ollama
+
+**Mistral** is a large language model available through Ollama, trained on a mix of supervised and unsupervised data. To use Mistral with Ollama, run the following command:
+
+```bash
+$ ollama pull mistral
